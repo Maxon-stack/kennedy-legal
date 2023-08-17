@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/React-Portfolio/kennedy-legal/static/css/main.66ea49cd.css",
+    "main.js": "/React-Portfolio/kennedy-legal/static/js/main.236899d7.js",
+    "static/media/single.jpg": "/React-Portfolio/kennedy-legal/static/media/single.6a23ed153f3b9201d172.jpg",
+    "static/media/team2.jpg": "/React-Portfolio/kennedy-legal/static/media/team2.aa0595768b1c901cf902.jpg",
+    "static/media/team.jpg": "/React-Portfolio/kennedy-legal/static/media/team.2cfdb449f3e33c9f2e76.jpg",
+    "static/media/workingteam.jpg": "/React-Portfolio/kennedy-legal/static/media/workingteam.40ce1621ff2eda41354f.jpg",
+    "static/media/BestAttorneys.png": "/React-Portfolio/kennedy-legal/static/media/BestAttorneys.40b4c7b54d9c331fc720.png",
+    "static/media/personal.jpg": "/React-Portfolio/kennedy-legal/static/media/personal.6335d3a43d65d84f6903.jpg",
+    "static/media/TopTL.png": "/React-Portfolio/kennedy-legal/static/media/TopTL.587b99be17d73975afc0.png",
+    "static/media/HighStakesLitigators.png": "/React-Portfolio/kennedy-legal/static/media/HighStakesLitigators.d378adbddfbebd58592a.png",
+    "static/media/Million.png": "/React-Portfolio/kennedy-legal/static/media/Million.ef2beda9fcc6e68b6298.png",
+    "static/media/DJA.png": "/React-Portfolio/kennedy-legal/static/media/DJA.f2d7b5d64087ef321a66.png",
+    "static/media/SuperLawyers.png": "/React-Portfolio/kennedy-legal/static/media/SuperLawyers.019442448f6504c3acb1.png",
+    "static/media/lions.svg": "/React-Portfolio/kennedy-legal/static/media/lions.e385dfccb4045322336b79507f82efba.svg",
+    "static/media/logo.webp": "/React-Portfolio/kennedy-legal/static/media/logo.48cb3aa62371e438e703.webp",
+    "static/media/NADC.png": "/React-Portfolio/kennedy-legal/static/media/NADC.bbb59d7e671e5028bc86.png",
+    "static/media/lawyersofdistinction.png": "/React-Portfolio/kennedy-legal/static/media/lawyersofdistinction.9ba7d9e0c756eda7e61b.png",
+    "static/media/us-flag.svg": "/React-Portfolio/kennedy-legal/static/media/us-flag.266e14a52e41c2f01b67c82add0c5e01.svg",
+    "static/media/china-flag.svg": "/React-Portfolio/kennedy-legal/static/media/china-flag.3415b4bc20a6f96aa05098fbed926bec.svg",
+    "index.html": "/React-Portfolio/kennedy-legal/index.html",
+    "static/media/italia-flag.svg": "/React-Portfolio/kennedy-legal/static/media/italia-flag.e01288ec109e68cbafe363f4052319fd.svg",
+    "static/media/germany-flag.svg": "/React-Portfolio/kennedy-legal/static/media/germany-flag.39579a16c607aa6c5a73b28488ba6e01.svg",
+    "main.66ea49cd.css.map": "/React-Portfolio/kennedy-legal/static/css/main.66ea49cd.css.map",
+    "main.236899d7.js.map": "/React-Portfolio/kennedy-legal/static/js/main.236899d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66ea49cd.css",
+    "static/js/main.236899d7.js"
+  ]
+}
