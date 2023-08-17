@@ -28,12 +28,12 @@ const Hero = () => {
     setCurrentSlide((prev) => prev - 1);
   };
   return (
-    <section className="bg-white dark:bg-gray-900 antialiased">
+    <section className="bg-white dark:bg-black antialiased">
       <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
         <div className="flex flex-col gap-8 lg:items-center lg:gap-16 lg:flex-row">
           <div className="lg:max-w-xl xl:shrink-0">
             <div>
-              <h2 className="text-3xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-primary-500 sm:text-5xl">
+              <h2 className="text-3xl font-extrabold leading-none tracking-tight text-black dark:text-primary-500 sm:text-5xl">
               Kennedy's Legal Team
               </h2>
               <p className="mt-5 text-base font-normal text-gray-500 dark:text-gray-400 md:max-w-3xl sm:text-xl" >
@@ -54,7 +54,7 @@ const Hero = () => {
               <Link
                 to="/"
                 title=""
-                className="sm:w-[182px] inline-flex w-full justify-center items-center px-5 py-3 text-base font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg shrink-0 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                className="sm:w-[182px] inline-flex w-full justify-center items-center px-5 py-3 text-base font-medium text-center text-black bg-white border border-gray-200 rounded-lg shrink-0 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                 role="button">
                 <svg
                   aria-hidden="true"

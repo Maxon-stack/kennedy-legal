@@ -5,6 +5,7 @@ import eng from "../assets/us-flag.svg";
 import de from "../assets/germany-flag.svg";
 import it from "../assets/italia-flag.svg";
 import cn from "../assets/china-flag.svg";
+import CustomDivider from "./CustomDivider/CustomDivider";
 const initialState = { "practice areas": false, resources: false };
 const navLink = [
   { name: "home", path: "/", hasDropdown: false },
@@ -53,9 +54,9 @@ const Navbar = () => {
 
   return (
     <header className="shadow-md">
-      <nav className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-800">
+      <nav className="bg-white border-gray-200 dark:border-primary-500 dark:bg-black">
         <div className="flex flex-wrap justify-between gap-2 items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-          <a href="https://flowbite.com" className="flex items-center">
+          <a href="/" className="flex items-center">
             <img src={logo} className="mr-3 h-16 sm:h-20" alt="Flowbite Logo" />
           </a>
           <div className="relative hidden md:flex items-center gap-0">
@@ -63,7 +64,7 @@ const Navbar = () => {
               type="button"
               onClick={() => setLanguageDropdown((prev) => !prev)}
               data-dropdown-toggle="language-dropdown"
-              className="flex gap-2 items-center text-gray-900 dark:text-gray-300 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 lg:px-4 py-2 lg:py-2.5 mr-2 md:mr-3 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
+              className="flex gap-2 items-center text-black dark:text-gray-300 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 lg:px-4 py-2 lg:py-2.5 mr-2 md:mr-3 dark:hover:bg-black focus:outline-none dark:focus:ring-gray-800">
               <img src={selectedLanguage.logo} alt="" className="w-6" />{" "}
               <span className="hidden mr-2 md:inline">
                 {selectedLanguage.name}
@@ -86,7 +87,7 @@ const Navbar = () => {
             {languageDropdown && (
               <div
                 className="top-12 absolute z-50 my-4 w-36 text-base list-none bg-white 
-                rounded shadow dark:bg-gray-700 animate-fade-in"
+                rounded shadow dark:bg-black animate-fade-in"
                 id="language-dropdown">
                 <ul className="py-1 flex flex-col w-full items-start">
                   {languagesList.map((item, index) => {
@@ -98,7 +99,7 @@ const Navbar = () => {
                             setLanguageDropdown(false);
                           }}
                           to="/"
-                          className="w-full flex items-center gap-2 py-2 px-4 text-sm text-gray-700
+                          className="w-full flex items-center gap-2 py-2 px-4 text-sm text-black
                            hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                           role="menuitem">
                           <img src={item.logo} alt="" className="w-6" />{" "}
@@ -111,7 +112,7 @@ const Navbar = () => {
               </div>
             )}
             <a
-              className="text-gray-900 dark:text-primary-500 font-semibold flex items-center gap-2 text-sm"
+              className="text-black dark:text-primary-500 font-semibold flex items-center gap-2 text-sm"
               href="tel:9542173100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -158,16 +159,16 @@ const Navbar = () => {
             )}
           </button>
           {mobileMenu && (
-            <div className="fixed h-screen top-14 sm:top-16 left-0 w-full bg-white  dark:bg-gray-700 animate-slide-right z-40">
+            <div className="fixed h-screen top-14 sm:top-16 left-0 w-full bg-white  dark:bg-black animate-slide-right z-40">
               {" "}
-              <nav className=" bg-white border-gray-200 dark:bg-gray-700 dark:border-gray-600 border-y">
+              <nav className=" bg-white border-gray-200 dark:bg-black dark:border-gray-600 border-y">
                 <div className="flex flex-col lg:flex-row justify-between gap-4 py-4 px-4 mx-auto max-w-screen-xl lg:grid-cols-2 md:px-6">
                   <form className="w-full lg:w-[300px] flex mb-4 lg:order-2 lg:mb-0">
                     <div className="relative w-full">
                       <input
                         type="search"
                         id="search-dropdown"
-                        className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg md:rounded-l-none border-l-1 dark:border-gray-800  border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800       dark:placeholder-gray-400 dark:text-white dark:focus:border-primary-500"
+                        className="block p-2.5 w-full z-20 text-sm text-black bg-gray-50 rounded-lg md:rounded-l-none border-l-1 dark:border-gray-800  border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800       dark:placeholder-gray-400 dark:text-white dark:focus:border-primary-500"
                         placeholder="Search anything..."
                         required=""
                       />
@@ -198,7 +199,7 @@ const Navbar = () => {
                       <button
                         type="button"
                         data-dropdown-toggle="language-dropdown"
-                        className="inline-flex items-center text-gray-900 dark:text-gray-300 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 lg:px-4 py-2 lg:py-2.5 mr-2 md:mr-3 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
+                        className="inline-flex items-center text-black dark:text-gray-300 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 lg:px-4 py-2 lg:py-2.5 mr-2 md:mr-3 dark:hover:bg-black focus:outline-none dark:focus:ring-gray-800">
                         <svg
                           className="w-5 h-5 rounded-full md:mr-2"
                           xmlns="http://www.w3.org/2000/svg"
@@ -253,7 +254,7 @@ const Navbar = () => {
                         </svg>
                       </button>
                       <a
-                        className="text-gray-900 dark:text-gray-300 font-semibold flex items-center gap-2 text-sm"
+                        className="text-black dark:text-gray-300 font-semibold flex items-center gap-2 text-sm"
                         href="tel:0123456789">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -271,13 +272,13 @@ const Navbar = () => {
                       </a>
                       {/* Dropdown */}
                       <div
-                        className="hidden z-50 my-4 w-48 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+                        className="hidden z-50 my-4 w-48 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-black"
                         id="language-dropdown">
                         <ul className="py-1" role="none">
                           <li>
                             <Link
                               to="/"
-                              className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                              className="block py-2 px-4 text-sm text-black hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                               role="menuitem">
                               <div className="inline-flex items-center">
                                 <svg
@@ -321,7 +322,7 @@ const Navbar = () => {
                           <li>
                             <Link
                               to="/"
-                              className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                              className="block py-2 px-4 text-sm text-black hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                               role="menuitem">
                               <div className="inline-flex items-center">
                                 <svg
@@ -346,7 +347,7 @@ const Navbar = () => {
                           <li>
                             <Link
                               to="/"
-                              className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                              className="block py-2 px-4 text-sm text-black hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                               role="menuitem">
                               <div className="inline-flex items-center">
                                 <svg
@@ -374,7 +375,7 @@ const Navbar = () => {
                           <li>
                             <Link
                               to="/"
-                              className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                              className="block py-2 px-4 text-sm text-black hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                               role="menuitem">
                               <div className="inline-flex items-center">
                                 <svg
@@ -463,7 +464,7 @@ const Navbar = () => {
                           <li key={index}>
                             <Link
                               to={item.path}
-                              className="capitalize whitespace-nowrap text-gray-900 dark:text-white hover:text-primary-500-600 dark:hover:text-primary-500"
+                              className="capitalize whitespace-nowrap text-black dark:text-white hover:text-primary-500 dark:hover:text-primary-500"
                               aria-current="page">
                               {item.name}
                             </Link>
@@ -478,15 +479,16 @@ const Navbar = () => {
           )}
         </div>
       </nav>
-
-      <nav className="hidden md:block bg-white border-gray-200 dark:bg-gray-700 dark:border-gray-600 border-y">
+      <CustomDivider />
+{/* Lower nav */}
+      <nav className="hidden md:block bg-white  dark:bg-black dark:border-primary-500">
         <div className="flex flex-col lg:flex-row justify-between gap-4 py-4 px-4 mx-auto max-w-screen-xl lg:grid-cols-2 md:px-6">
           <form className="w-full lg:w-[300px] flex mb-4 lg:order-2 lg:mb-0">
             <div className="relative w-full">
               <input
                 type="search"
                 id="search-dropdown"
-                className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50  rounded-lg   border-l-1  border border-gray-300 dark:border-gray-800 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800    dark:placeholder-gray-400 dark:text-white dark:focus:border-primary-500"
+                className="block p-2.5 w-full z-20 text-sm text-black bg-gray-50  rounded-lg   border-l-1  border border-gray-300 dark:border-gray-800 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800  dark:placeholder-gray-400 dark:text-white dark:focus:border-primary-500"
                 placeholder="Search anything..."
                 required=""
               />
@@ -540,7 +542,7 @@ const Navbar = () => {
                   <li key={index}>
                     <Link
                       to={item.path}
-                      className="capitalize whitespace-nowrap text-gray-900 dark:text-white hover:text-primary-500-600 dark:hover:text-primary-500"
+                      className="capitalize whitespace-nowrap text-black dark:text-white hover:text-primary-500-600 dark:hover:text-primary-500"
                       aria-current="page">
                       {item.name}
                     </Link>
@@ -569,9 +571,9 @@ export default Navbar;
 const MegaMenu1 = ({ handleMegaMenu }) => {
   return (
     <nav className="z-50 fixed w-full top-0 h-screen md:absolute md:h-auto md:top-auto bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-600 animate-slide-down">
-      <div className="grid py-4 px-4 mx-auto max-w-screen-xl text-gray-900 dark:text-white md:grid-cols-2 lg:grid-cols-4 md:px-6">
+      <div className="grid py-4 px-4 mx-auto max-w-screen-xl text-black dark:text-white md:grid-cols-2 lg:grid-cols-4 md:px-6">
         <button
-          className="md:hidden p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center gap-1 text-sm font-semibold"
+          className="md:hidden p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black flex items-center gap-1 text-sm font-semibold"
           name="practice areas"
           onClick={(e) => handleMegaMenu(e)}>
           <svg
@@ -592,7 +594,7 @@ const MegaMenu1 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -618,7 +620,7 @@ const MegaMenu1 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -644,7 +646,7 @@ const MegaMenu1 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -671,7 +673,7 @@ const MegaMenu1 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -697,7 +699,7 @@ const MegaMenu1 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -723,7 +725,7 @@ const MegaMenu1 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -750,7 +752,7 @@ const MegaMenu1 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -776,7 +778,7 @@ const MegaMenu1 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -802,7 +804,7 @@ const MegaMenu1 = ({ handleMegaMenu }) => {
 
         </ul>
         <div className="col-span-2 p-4 lg:col-span-1">
-          <h2 className="mb-2 font-semibold text-gray-900 dark:text-white">
+          <h2 className="mb-2 font-semibold text-black dark:text-white">
             Why Kennedy?
           </h2>
           <p className="mb-2 font-light text-gray-500 dark:text-gray-400">
@@ -833,9 +835,9 @@ const MegaMenu1 = ({ handleMegaMenu }) => {
 const MegaMenu2 = ({ handleMegaMenu }) => {
   return (
     <nav className="z-50 fixed w-full top-0 h-screen md:absolute md:h-auto md:top-auto bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-600 animate-slide-down">
-      <div className="grid py-4 px-4 mx-auto max-w-screen-xl text-gray-900 dark:text-white md:grid-cols-2 lg:grid-cols-4 md:px-6">
+      <div className="grid py-4 px-4 mx-auto max-w-screen-xl text-black dark:text-white md:grid-cols-2 lg:grid-cols-4 md:px-6">
         <button
-          className="md:hidden p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center gap-1 text-sm font-semibold"
+          className="md:hidden p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black flex items-center gap-1 text-sm font-semibold"
           name="resources"
           onClick={(e) => handleMegaMenu(e)}>
           <svg
@@ -856,7 +858,7 @@ const MegaMenu2 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -882,7 +884,7 @@ const MegaMenu2 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -909,7 +911,7 @@ const MegaMenu2 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -935,7 +937,7 @@ const MegaMenu2 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -961,7 +963,7 @@ const MegaMenu2 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -988,7 +990,7 @@ const MegaMenu2 = ({ handleMegaMenu }) => {
           <li>
             <Link
               to="/"
-              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+              className="flex p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-black">
               <svg
                 className="mr-2 w-6 h-6"
                 fill="currentColor"
@@ -1012,7 +1014,7 @@ const MegaMenu2 = ({ handleMegaMenu }) => {
           </li>
         </ul>
         <div className="col-span-2 p-4 lg:col-span-1">
-          <h2 className="mb-2 font-semibold text-gray-900 dark:text-white">
+          <h2 className="mb-2 font-semibold text-black dark:text-white">
             Our brands
           </h2>
           <p className="mb-2 font-light text-gray-500 dark:text-gray-400">

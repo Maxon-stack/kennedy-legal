@@ -97,39 +97,44 @@ const Footer = () => {
 
   return (
 
-    <footer className="bg-gray-900 ">
+    <footer className="bg-black ">
       <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8">
 
-        <div className='flex flex-col justify-items-center'>
-          <div className="lg:flex lg:items-center lg:justify-between">
+        <div className='flex flex-col justify-items-center mb-16'>
+          <div className="lg:flex lg:items-center lg:justify-around">
             <div className="flex justify-center  sm:justify-start">
               <img src={logo} alt="Logo" className=" w-[200px]" />
             </div>
 
-            <p
-              className="mt-4 max-w-md text-center leading-relaxed text-gray-500 sm:text-left lg:mt-0"
-            >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-              consequuntur amet culpa cum itaque neque.
-            </p>
+            <div >
+              <div className="flex justify-center space-x-6 mb-5">
+                {navigation.social.map((item) => (
+                  <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
+              <p
+                className="mt-4 max-w-md text-center leading-relaxed text-gray-500 sm:text-left lg:mt-0"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+                consequuntur amet culpa cum itaque neque.
+              </p>
+            </div>
+
+
           </div>
-          <div className="flex space-x-6">
-            {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
-                <span className="sr-only">{item.name}</span>
-                <item.icon className="h-6 w-6" aria-hidden="true" />
-              </a>
-            ))}
-          </div>
+
         </div>
 
 
 
 
-        <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0 text-center">
+        <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0 text-center">
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <div>
-              <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
+              <h3 className="text-lg font-semibold leading-6 text-primary-500">Company</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.company.map((item) => (
                   <li key={item.name}>
@@ -141,7 +146,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
+            <div className='mt-10 md:mt-0'>
               <h3 className="text-lg font-semibold leading-6 text-primary-500">Practice Areas</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.solutions.map((item) => (
@@ -156,8 +161,8 @@ const Footer = () => {
 
           </div>
           <div className="md:grid md:grid-cols-2 md:gap-8">
-            <div className="mt-10 md:mt-0">
-              <h3 className="text-sm font-semibold leading-6 text-white">Support</h3>
+            <div >
+              <h3 className="text-lg font-semibold leading-6 text-primary-500">Support</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.support.map((item) => (
                   <li key={item.name}>
@@ -169,7 +174,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="mt-10 md:mt-0">
-              <h3 className="text-sm font-semibold leading-6 text-white">Legal</h3>
+              <h3 className="text-lg font-semibold leading-6 text-primary-500">Legal</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.legal.map((item) => (
                   <li key={item.name}>
