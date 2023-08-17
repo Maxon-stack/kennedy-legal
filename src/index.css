@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+ 
+ .flex-c{
+  @apply flex justify-center items-center text-center
+ }
+ .abs-c{
+  @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute
+ }
+  .btn{
+    @apply  py-1.5 px-4  rounded-md font-semibold transition-all duration-300 ease-in-out leading-normal text-sm 
+    
+  }
+  .btn-primary{
+    @apply bg-primary hover:bg-[#627063] text-white
+
+  }
+  .min-h-dscreen{
+    @apply min-h-[100dvh]
+  }
+  .max-w-modal{
+    @apply w-screen md:max-w-2xl
+  }
+  
+}
+
+:root{
+  --primary : #D4AF37
+}
+
+
+
+
+
+  .animate-slide-down{
+    animation: slide-down 300ms forwards;
+  }
+
+  @keyframes slide-down {
+    from{
+      transform: translateY(-100%);
+    }
+    to{
+      transform: translateY(0%);
+    }
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    border-radius: 18px;
+    background-color: #fff;
+    height: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fff;
+    height: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+  
+    background-color: var(--primary);
+  }
+
+  .animate-slide-right{
+    animation: slide-right 300ms forwards;
+  }
+
+  @keyframes slide-right {
+    from{
+      transform: translateX(-100%);
+    }
+    to{
+      transform: translateX(0%);
+    }
+  }
+
+  
+  .animate-fade-in{
+    animation: fade-in 300ms forwards;
+  }
+
+  @keyframes fade-in {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+
+    }
+  }
