@@ -4,6 +4,7 @@ import Awards from "./components/Awards/Awards";
 import Footer from "./components/Footer/Footer";
 import PracticeAreas from "./components/PracticeArea/PracticeAreas";
 import CustomDivider from "./components/CustomDivider/CustomDivider";
+import Team from "./components/Team/Team";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Awards/>
       <PracticeAreas/>
+      <Team />
       <CustomDivider/>
       <Footer/>
     </div>

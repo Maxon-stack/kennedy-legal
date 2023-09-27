@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Awards from "./Awards/Awards";
+import CustomDivider from "./CustomDivider/CustomDivider";
 const team = require("../assets/HeroSlider/team.jpg");
 const single = require("../assets/HeroSlider/single.jpg");
 const team2 = require("../assets/HeroSlider/team2.jpg");
@@ -12,7 +13,12 @@ const carouselItems = [
   team2,
   workingteam,
 ];
-
+const stats = [
+  { id: 1, name: '', value: 'Over $100 Million paid out to clients' },
+  { id: 2, name: '', value: '95% win rate' },
+  { id: 3, name: '', value: '99.9% guarantee' },
+  { id: 4, name: 'Paid out to clients', value: '$70M' },
+]
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const handleNext = () => {
@@ -27,20 +33,94 @@ const Hero = () => {
     }
     setCurrentSlide((prev) => prev - 1);
   };
+
+
+
+
+  // src='https://le-cdn.website-editor.net/s/e1e42010e0a64d409bfa4dcd6d918d0c/dms3rep/multi/opt/Kennedy+Legal+Team+Office-1920w.png?Expires=1694817585&Signature=R5NOvfaNtoK83aC3qcpja3-~2YDR29KcGlHOvNImkY2HWY1Ww~AewsL7fshvPGM0c51uok~WS~a-gvimX5jswWh4NZv1sOylSLYIgOP0kRLEloIjaoaBUFGNxnM0yqwjpgUUE7JEVHhyUAj1NONRmOKv-0mTS7NSxZN7Q39EigU4Ux0Kb~0bcA6Ho6DZ0Yq3YYG3qpMprl~miaihLmDz~zz2LJ1CZZxKfl6IXIMCHvq8GaNtCY0Mg2nHEIK-f6WQbksW48rDOm59Rd8LdbgdO1aM3UQNWgWJwPn4JN8ThNXyFZO1sQa0ru1HNblfQbFWr13lLAE5TD8FYa9WbUn5wQ__&Key-Pair-Id=K2NXBXLF010TJW'
   return (
     <section className="bg-white dark:bg-black antialiased">
+
+
+
+
+
+      <div className="relative bg-black shadow-lg ">
+        {/* Decorative image and overlay */}
+        <div aria-hidden="true" className="absolute inset-0 ">
+          <img
+            src={carouselItems[0]}
+            alt=""
+            className="h-full w-full object-cover object-center "
+          />
+        </div>
+        <div aria-hidden="true" className="absolute inset-0 bg-gray-900   opacity-50" />
+
+        <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-32 text-center sm:py-64 lg:px-0">
+          {/* <h1 className="text-4xl font-bold tracking-tight text-primary-600 lg:text-6xl">Kennedy's Legal Team</h1>
+          <p className="mt-4 text-xl text-white">
+            Text will go here
+          </p>
+          <a
+            href="#"
+            className="mt-8 inline-block rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100"
+          >
+            Buttons Here
+          </a> */}
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+      {/* https://tailwindui.com/components/marketing/sections/stats-sections#component-d6e7447b0fced461b1de5660124a2311*/}
+
+      {/* https://tailwindui.com/components/marketing/sections/cta-sections#component-8dd4c113a443605acd83580f4573135c  - CTA section*/}
+
+
+
+      <div className="bg-black py-8 sm:py-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:max-w-none">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-primary-500 sm:text-4xl">South Florida's best Car Accident Attorneys</h2>
+              <p className="mt-4 text-lg leading-8 text-gray-300">
+                Lorem ipsum dolor sit amet consect adipisicing possimus.
+              </p>
+            </div>
+            <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+              {stats.map((stat) => (
+                <div key={stat.id} className="flex flex-col bg-white/5 p-8">
+                  <dt className="text-sm font-semibold leading-6 text-gray-300">{stat.name}</dt>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-primary-500">{stat.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
       <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
         <div className="flex flex-col gap-8 lg:items-center lg:gap-16 lg:flex-row">
           <div className="lg:max-w-xl xl:shrink-0">
             <div>
               <h2 className="text-3xl font-extrabold leading-none tracking-tight text-black dark:text-primary-500 sm:text-5xl">
-              Kennedy's Legal Team
+                Kennedy's Legal Team
               </h2>
               <p className="mt-5 text-base font-normal text-gray-500 dark:text-gray-400 md:max-w-3xl sm:text-xl" >
-              RECENTLY NAMED TO FORT LAUDERDALE ILLUSTRATED'S TOP LAWYERS LIST.
+                RECENTLY NAMED TO FORT LAUDERDALE ILLUSTRATED'S TOP LAWYERS LIST.
               </p>
               <p className="mt-5 text-base font-normal text-gray-500 dark:text-gray-400 md:max-w-3xl sm:text-xl">
-              Our mission at the Kennedy Legal Team is to help our clients achieve their goals by providing high quality, ethically sound legal counsel and strategic advice, while continuing to exceed their expectations. We will continue to build our firms reputation by satisfying our client’s needs, while working hand in hand with them to further achieve their desired results through open communication, responsiveness, and attention to detail. The Kennedy Legal Team values Compassion, Professionalism, Integrity, Privacy, Communication, and the Pursuit of Excellence.
+                Our mission at the Kennedy Legal Team is to help our clients achieve their goals by providing high quality, ethically sound legal counsel and strategic advice, while continuing to exceed their expectations. We will continue to build our firms reputation by satisfying our client’s needs, while working hand in hand with them to further achieve their desired results through open communication, responsiveness, and attention to detail. The Kennedy Legal Team values Compassion, Professionalism, Integrity, Privacy, Communication, and the Pursuit of Excellence.
               </p>
             </div>
             <div className="flex flex-col gap-4 mt-8 sm:flex-row">

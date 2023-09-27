@@ -10,7 +10,7 @@ const CustomDivider = () => {
     </div>
     <div className="relative flex justify-center">
       <span className="bg-black px-2 text-primary-500">
-        <Lion className="h-13 w-12 text-primary-500 fill-primary-500" aria-hidden="true" />
+        <Lion className="h-12.5 w-12 text-primary-500 fill-primary-500 " viewBox='0 0 1000 1000' aria-hidden="true" />
       </span>
     </div>
   </div>
